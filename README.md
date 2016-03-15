@@ -1,0 +1,102 @@
+jquery.expand-list
+========
+
+Lightweight expandable list plugin with or without accordion
+
+### Html example
+```html
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<title>Jquery expand list Example</title>
+	
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery.expand-list.css" type="text/css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/jquery.expand-list.js"></script>
+	
+	<script type="text/javascript">
+	
+		$(document).ready(function() {
+			
+			var $lists = ['.my-list'];
+
+			$.each($lists, function(k, v) {
+				var $list = $(v);
+	
+				if ($list.length > 0) {
+					var listOptions = {
+						accordion: true,
+						speed: 100
+					};
+		
+					$.expandList($list, listOptions);
+				}
+			});
+		
+		});
+		
+	</script>
+	
+</head>
+
+<body>
+	
+	<div class="container">
+	
+		<div class="my-list cf">
+			<h3 class="heading"><a href="/listan">Min pretty list</a></h3>
+			<ul class="list">
+				<li class="item"><a href="/item1">Item 1</a></li>
+				<li class="item"><a href="/item2">Item 2</a></li>
+				<li class="item"><a href="/item3">Item 3</a></li>
+				<li class="item"><a href="/item4">Item 4</a></li>
+				<li class="item"><a href="/item5">Item 5</a></li>
+			</ul>
+		</div>
+		
+		<div class="my-list cf">
+			<h3 class="heading"><a href="/listan">Min pretty list 2</a></h3>
+			<ul class="list">
+				<li class="item"><a href="/item1">Item 1</a></li>
+				<li class="item"><a href="/item2">Item 2</a></li>
+				<li class="item"><a href="/item3">Item 3</a></li>
+				<li class="item"><a href="/item4">Item 4</a></li>
+				<li class="item"><a href="/item5">Item 5</a></li>
+			</ul>
+		</div>
+		
+	</div>
+
+</body>
+</html>
+```
+
+### Javascript example 
+```javascript
+$(document).ready(function() {
+	
+	var $lists = ['.my-list'];
+
+	$.each($lists, function(k, v) {
+		var $list = $(v);
+
+		if ($list.length > 0) {
+			var listOptions = {
+				accordion: true,
+				speed: 100
+			};
+
+			$.expandList($list, listOptions);
+		}
+	});
+});
+ 
+```
+
+### Todo
+- Groups of lists that has separated accordion functionality

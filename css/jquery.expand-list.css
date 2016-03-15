@@ -1,0 +1,94 @@
+/* Micro clearfix */
+.cf:before,
+.cf:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.cf:after {
+	clear: both;
+}
+
+body {
+	background-color: #888;
+}
+
+.container {
+	width: 500px;
+	margin: 100px auto 0px auto;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.expand-list {
+	margin-top: 5px;
+}
+
+.expand-list .heading {
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	margin: 0;
+	position: relative;
+	font-size: 16px;
+}
+
+.expand-list .heading a {
+	padding-left: 16px;
+	text-decoration: none;
+	color: #000;
+}
+
+.expand-list .expand-trigger {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #dedede;
+	width: 23px;
+	height: 23px;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	border-radius: 23px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'ProximaNova-Bold';
+	color: #fff;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.expand-list.expanded .expand-trigger {
+	line-height: 20px;
+}
+
+.expand-list .list {
+	position: relative;
+	top: 0px;
+	height: 0px;
+	margin: 0;
+	overflow: hidden;
+	padding-left: 0px;
+}
+
+.expand-list .list li {
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	margin: 0;
+	padding-left: 16px;
+	list-style: none;
+}
+
+.expand-list .list li:hover {
+	background-color: #ccc;
+}
+
+.expand-list .list li a {
+	color: #000;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+}
