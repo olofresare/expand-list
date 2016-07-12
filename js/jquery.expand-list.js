@@ -2,8 +2,6 @@
 	"use strict";
 	
 	$.expandList = function($lists, options) {
-		
-		// var $document = $(document);
 	
 		$lists = $lists.filter(':not(".expand-list")');
 		
@@ -50,8 +48,7 @@
 					$wrapper.addClass('expanded');
 				})
 			}
-			else 
-			{
+			else {
 				$list.animate({
 					height: 0
 				}, settings.speed, function() {
